@@ -82,7 +82,8 @@ const retirar = async (req, res) => {
 	const facturaDeRetiro = {
 		amount: calcularMonto(fechaDeEntrada, fechaDeSalida),
 		In: fechaDeEntrada,
-		out: fechaDeSalida
+		out: fechaDeSalida,
+		fixed: fijo
 	};
 
 	res.json(facturaDeRetiro).status(204)

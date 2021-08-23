@@ -5,7 +5,6 @@ const formato = "DD MM YY HH mm ss";
 
 const estacionarVehiculo = async (req, res) => {
 	const { idBody } = req.body;
-	console.log(idBody);
 	const now = moment();
 
 	const infoEstacionado = {
