@@ -24,6 +24,11 @@ https://www.mongodb.com/try/download/community
 
 Debe acceder a la raiz del proyecto y ejecutar los siguientes comandos en la consola/terminal.
 
+Este comando inicia instala las dependencias necesarias para ejecutar el proyecto de manera local.
+
+```
+yarn install
+```
 Este comando inicia el proyecto, en la consola encontrara el puerto en el que se esta ejecutando.
 
 ```
