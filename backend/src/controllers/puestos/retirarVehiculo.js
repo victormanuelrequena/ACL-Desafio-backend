@@ -1,5 +1,5 @@
-import Puesto from '../models/Puesto.model.js';
-import keyGenerate from '../libs/keyGenerate.js';
+import Puesto from '../../models/Puesto.model.js';
+import keyGenerate from '../../libs/keyGenerate.js';
 import moment from 'moment';
 moment.locale('es');
 const formato = "DD MM YY HH mm ss";
