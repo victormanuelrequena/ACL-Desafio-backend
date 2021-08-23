@@ -24,7 +24,7 @@ https://www.mongodb.com/try/download/community
 
 Debe acceder a la raiz del proyecto y ejecutar los siguientes comandos en la consola/terminal.
 
-Este comando inicia el proyecto en la consola encontrara el puesto en el que se esta ejecutando.
+Este comando inicia el proyecto, en la consola encontrara el puerto en el que se esta ejecutando.
 
 ```
 yarn run dev
