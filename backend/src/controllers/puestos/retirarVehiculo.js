@@ -1,6 +1,7 @@
-import Puesto from '../../models/Puesto.model.js';
-import keyGenerate from '../../libs/keyGenerate.js';
-import moment from 'moment';
+const Puesto = require('../../models/Puesto.model.js');
+const keyGenerate = require('../../libs/keyGenerate.js');
+const moment = require('moment');
+
 moment.locale('es');
 const formato = "DD MM YY HH mm ss";
 
@@ -89,4 +90,4 @@ const retirar = async (req, res) => {
 	res.json(facturaDeRetiro).status(204)
 };
 
-export default retirar;
+module.exports = retirar;

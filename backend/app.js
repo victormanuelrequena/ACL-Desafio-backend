@@ -1,7 +1,7 @@
-import express from 'express';
-import morgan from 'morgan';
-import cors from 'cors';
-import routesPuestos from './src/routes/puestos.routes.js';
+const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const routesPuestos = require('./src/routes/puestos.routes.js');
 
 const app = express();
 
@@ -15,4 +15,4 @@ app.use('/', routesPuestos);
 //Settings
 app.set('port', 4000);
 
-export default app;
+module.exports = app;

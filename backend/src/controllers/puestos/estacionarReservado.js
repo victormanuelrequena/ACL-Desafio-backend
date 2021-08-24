@@ -1,4 +1,4 @@
-import Puesto from '../../models/Puesto.model.js';
+const Puesto = require('../../models/Puesto.model.js');
 
 let chart = 0;
 
@@ -34,4 +34,4 @@ const estacionarEnReservado = async (req, res) => {
 	};
 };
 
-export default estacionarEnReservado;
+module.exports = estacionarEnReservado;

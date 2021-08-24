@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 
 const puestoSchema = new mongoose.Schema({
 	estado: {
@@ -15,13 +16,13 @@ const puestoSchema = new mongoose.Schema({
 	},
 	key: {
 		type: String,
-		unique: true,
+		unique: false,
 		required: false
 	},
 	lugar: {
 		type: Number,
-		unique: true,
-		required: true
+		unique: false,
+		// required: true
 	},
 	estacionado: {
 		type: Boolean,
@@ -36,4 +37,6 @@ const puestoSchema = new mongoose.Schema({
 	versionKey: false
 })
 
-export default mongoose.model('Puesto', puestoSchema);
+puestoSchema.plugin(AutoIncrement, {inc_field: 'lugar'});
+
+module.exports = mongoose.model('Puesto', puestoSchema);

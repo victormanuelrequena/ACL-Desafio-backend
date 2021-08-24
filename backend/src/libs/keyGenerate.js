@@ -10,4 +10,4 @@ const keyGenerate = (length) => {
   return password;
 };
 
-export default keyGenerate;
+module.exports = keyGenerate;

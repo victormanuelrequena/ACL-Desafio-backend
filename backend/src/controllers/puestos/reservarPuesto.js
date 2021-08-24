@@ -1,5 +1,5 @@
-import Puesto from '../../models/Puesto.model.js';
-import moment from 'moment';
+const Puesto = require('../../models/Puesto.model.js');
+const moment = require('moment');
 moment.locale('es');
 const formato = "dddd MMMM YYYY HH mm ss";
 
@@ -44,4 +44,4 @@ const reservarPuesto = async (req, res) => {
 	 res.json(comprobante).status(201);
 };
 
-export default reservarPuesto;
+module.exports = reservarPuesto;

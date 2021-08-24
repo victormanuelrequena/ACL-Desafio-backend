@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/estacioname', {
 	useNewUrlParser: true,
@@ -8,3 +8,4 @@ mongoose.connect('mongodb://localhost/estacioname', {
 })
 .then(db => console.log('DB is connected'))
 .catch(err => console.log(err))
+

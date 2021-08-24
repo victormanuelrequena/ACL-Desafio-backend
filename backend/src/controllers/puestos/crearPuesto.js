@@ -1,8 +1,10 @@
-import keyGenerate from '../../libs/keyGenerate.js';
-import Puesto from '../../models/Puesto.model.js';
+const keyGenerate = require('../../libs/keyGenerate.js');
+const Puesto = require('../../models/Puesto.model.js');
 
 const crearPuesto = async (req,res) => {
 	const { lugar } = req.body;
+	for(let i = 0; i < lugar; i++) {
+
 	const estado = 'disponible';
 	const fijo = false;
 	const diasDeApartado = 0;
@@ -15,15 +17,16 @@ const crearPuesto = async (req,res) => {
 	 fijo,
 	 diasDeApartado,
 	 key,
-	 lugar,
 	 estacionado,
 	 hora_de_entrada
 	 });
 
 	 const puestoGuardado = await nuevoPuesto.save();
+	}
 
-	 res.json({message: `Puesto creado exitosamente en el lugar: ${lugar}`}).status(201);
+	 res.json({message: `Puesto creado exitosamente`}).status(201);
+
 };
 
 
-export default crearPuesto;
+module.exports = crearPuesto;

@@ -1,5 +1,6 @@
-import Puesto from '../../models/Puesto.model.js';
-import moment from 'moment';
+const Puesto = require('../../models/Puesto.model.js');
+
+const moment = require('moment');
 moment.locale('es');
 const formato = "DD MM YY HH mm ss";
 
@@ -17,4 +18,4 @@ const estacionarVehiculo = async (req, res) => {
 
 	 res.json(estacionado).status(201);
 };
-export default estacionarVehiculo;
+module.exports = estacionarVehiculo;

@@ -1,4 +1,4 @@
-import Puesto from '../../models/Puesto.model.js';
+const Puesto = require('../../models/Puesto.model.js');
 
 const retirarReservacion = async (req,res) => {
 	const { idBody } = req.body;
@@ -15,4 +15,4 @@ const retirarReservacion = async (req,res) => {
 	res.json({message: 'La reservacion a sido cancelada.'}).status(200);
 };
 
-export default retirarReservacion;
+module.exports = retirarReservacion;

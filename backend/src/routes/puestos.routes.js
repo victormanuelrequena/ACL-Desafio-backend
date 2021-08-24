@@ -1,12 +1,12 @@
-import { Router } from 'express';
-import obtenerPuestos from '../controllers/puestos/obtenerPuestos.js';
-import crearPuesto from '../controllers/puestos/crearPuesto.js';
-import estacionarVehiculo from '../controllers/puestos/estacionarVehiculo.js';
-import reservarPuesto from '../controllers/puestos/reservarPuesto.js';
-import retirarReservacion from '../controllers/puestos/retirarReservacion.js';
-import estacionarReservado from '../controllers/puestos/estacionarReservado.js';
-import eliminarPuesto from '../controllers/puestos/eliminarPuesto.js'
-import retirar from '../controllers/puestos/retirarVehiculo.js'
+const { Router } = require('express');
+const obtenerPuestos = require('../controllers/puestos/obtenerPuestos.js');
+const crearPuesto = require('../controllers/puestos/crearPuesto.js');
+const estacionarVehiculo = require('../controllers/puestos/estacionarVehiculo.js');
+const reservarPuesto = require('../controllers/puestos/reservarPuesto.js');
+const retirarReservacion = require('../controllers/puestos/retirarReservacion.js');
+const estacionarReservado = require('../controllers/puestos/estacionarReservado.js');
+const eliminarPuesto = require('../controllers/puestos/eliminarPuesto.js');
+const retirar = require('../controllers/puestos/retirarVehiculo.js');
 
 const router = Router();
 
@@ -26,4 +26,4 @@ router.put('/retirar', retirar);
 
 router.delete('/eliminar', eliminarPuesto);
 
-export default router;
+module.exports = router;
